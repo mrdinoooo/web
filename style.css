@@ -1,0 +1,134 @@
+:root {
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+}
+
+body {
+  font-family: termina, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+section:not(#sectionPin) {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  margin: auto;
+  place-items: center;
+}
+
+img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  z-index: 4;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+h1 span {
+  display: block;
+}
+
+h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
+
+.credit {
+  font-family: Termina, sans-serif;
+}
+.credit a {
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+}
+.pin-wrap > * {
+  min-width: 60vw;
+  padding: 0 5vw;
+}
+
+p {
+  position: absolute;
+  bottom: 10vw;
+  right: 10vw;
+  width: 200px;
+  line-height: 1.5;
+}
+
+
+
+.my-button {
+  background-color: rgba(255, 255, 255, 0.2); /* White background color with transparency */
+  border: none;
+  color: white; /* Text color */
+  padding: 1vw 1vw; /* Padding around the text */
+  font-size: 5vw; /* Text size */
+  cursor: pointer; /* Show a pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Add smooth transition effect */
+  backdrop-filter: blur(8px); /* Apply background blur (glass effect) */
+  display: inline-flex;
+  max-width: 20px;
+}
+
+/* Styling when hovering over the button */
+.my-button:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the transparency on hover */
+  transform: translateY(-2px); /* Slightly move the button up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+/* Styling when the button is clicked */
+.my-button:active {
+  background-color: rgba(255, 255, 255, 0.4); /* Adjust the transparency on click */
+  transform: translateY(0); /* Reset the button position */
+  box-shadow: none; /* Remove the shadow */
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: 9vw;
+}
